@@ -1,0 +1,5287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portofolio Guru - Risda Ardian Elistiana</title>
+
+<meta name="description"
+content="Portofolio Guru Risda Ardian Elistiana - Guru Matematika SDN Karangsono 1 Kabupaten Ngawi">
+
+<meta name="author" content="Risda Ardian Elistiana">
+
+<style>
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Trebuchet MS",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #f7fffb;
+    color: #214d43;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ============================================================
+   COLOR VARIABLES
+============================================================ */
+
+:root {
+
+    --green: #16875c;
+    --green-dark: #086642;
+    --green-deep: #075438;
+    --green-light: #dff6e9;
+    --green-soft: #eefbf4;
+
+    --blue: #3cb4dc;
+    --blue-dark: #155b7d;
+    --blue-light: #dff6ff;
+
+    --yellow: #ffd447;
+    --orange: #f5a623;
+
+    --white: #ffffff;
+    --cream: #fffef8;
+
+    --text: #244c43;
+    --text-light: #688078;
+    --border: #d8eee4;
+
+    --shadow:
+        0 15px 40px rgba(26, 113, 79, 0.12);
+
+    --shadow-small:
+        0 8px 20px rgba(26, 113, 79, 0.10);
+
+    --radius: 22px;
+}
+
+
+/* ============================================================
+   LOADING SCREEN
+============================================================ */
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s ease;
+}
+
+.loader-box {
+    text-align: center;
+}
+
+.loader-logo {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            #5bc98e
+        );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 34px;
+
+    margin: auto auto 20px;
+
+    animation: pulse 1.5s infinite;
+}
+
+.loader-box h3 {
+    color: var(--green-dark);
+    font-size: 20px;
+}
+
+.loader-box p {
+    color: #7b8e87;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 5000;
+
+    background: rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom:
+        1px solid rgba(21,135,92,0.12);
+
+    transition: 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow:
+        0 7px 25px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 230px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #078054,
+            #43b87c
+        );
+
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    border:
+        3px solid #dff5e9;
+
+    box-shadow:
+        0 6px 15px rgba(22,135,92,0.20);
+}
+
+.logo-text strong {
+    display: block;
+
+    color: var(--green-dark);
+
+    font-size: 16px;
+
+    line-height: 1.2;
+}
+
+.logo-text span {
+    display: block;
+
+    color: #799089;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* NAVIGATION */
+
+nav ul {
+    display: flex;
+
+    align-items: center;
+
+    gap: 23px;
+
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+
+    display: block;
+
+    padding:
+        28px 0
+        22px;
+
+    font-size: 12px;
+
+    color: #54766d;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+nav a.active {
+    color: var(--green);
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 14px;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    border-radius: 50px;
+
+    background: var(--green);
+}
+
+
+/* MOBILE BUTTON */
+
+.mobile-menu {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero {
+    position: relative;
+
+    min-height: 670px;
+
+    padding-top: 78px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #bceeff 0%,
+            #dcf8ff 47%,
+            #e7f9e4 100%
+        );
+}
+
+
+/* Decorative sky */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -220px;
+    top: -300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.22);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: -5%;
+    bottom: -115px;
+
+    width: 110%;
+    height: 220px;
+
+    background: #a8dc91;
+
+    border-radius:
+        50% 50% 0 0 /
+        100% 100% 0 0;
+}
+
+
+/* CLOUDS */
+
+.cloud {
+    position: absolute;
+
+    color: #fff;
+
+    font-size: 60px;
+
+    opacity: 0.85;
+
+    z-index: 1;
+
+    animation:
+        cloudMove 8s ease-in-out infinite;
+}
+
+.cloud-1 {
+    top: 115px;
+    left: 4%;
+}
+
+.cloud-2 {
+    top: 145px;
+    left: 42%;
+
+    font-size: 48px;
+
+    animation-delay: 2s;
+}
+
+.cloud-3 {
+    top: 245px;
+    left: 26%;
+
+    font-size: 35px;
+
+    animation-delay: 4s;
+}
+
+@keyframes cloudMove {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* SUN */
+
+.sun {
+    position: absolute;
+
+    top: 105px;
+    right: 5%;
+
+    font-size: 60px;
+
+    color: #f5c52e;
+
+    z-index: 2;
+
+    animation:
+        sunRotate 8s linear infinite;
+}
+
+@keyframes sunRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 20;
+
+    width: 52%;
+
+    padding:
+        80px 0
+        100px;
+}
+
+.welcome-text {
+    font-family:
+        "Comic Sans MS",
+        "Trebuchet MS",
+        sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: #155a78;
+
+    margin-bottom: 3px;
+}
+
+.hero-title {
+    font-size: clamp(
+        40px,
+        5vw,
+        64px
+    );
+
+    line-height: 1.03;
+
+    color: #14567b;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 10px;
+}
+
+.hero-name {
+    color: var(--green);
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 0;
+}
+
+.hero-profession {
+    color: #165b7a;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.hero-location {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    color: #38636a;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 22px;
+}
+
+.hero-location .pin {
+    font-size: 20px;
+
+    color: var(--green);
+}
+
+.hero-description {
+    max-width: 500px;
+
+    color: #456a64;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        14px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            #2ca976
+        );
+
+    color: white;
+
+    border-radius: 999px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 22px
+        rgba(21,135,92,0.23);
+
+    transition: 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 28px
+        rgba(21,135,92,0.28);
+}
+
+
+/* ============================================================
+   HERO ILLUSTRATION
+============================================================ */
+
+.hero-art {
+    position: absolute;
+
+    z-index: 20;
+
+    right: 0;
+    bottom: 0;
+
+    width: 55%;
+
+    height: 550px;
+}
+
+
+/* BOARD */
+
+.board {
+    position: absolute;
+
+    top: 80px;
+    right: 30px;
+
+    width: 450px;
+    height: 285px;
+
+    border:
+        12px solid #e8a92f;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #286d4c,
+            #3a875a
+        );
+
+    box-shadow:
+        0 16px 35px
+        rgba(32,83,59,0.20);
+
+    transform: rotate(-1deg);
+}
+
+.board-title {
+    position: absolute;
+
+    top: 22px;
+    left: 25px;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.math {
+    position: absolute;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    opacity: 0.9;
+}
+
+.math-1 {
+    top: 75px;
+    left: 35px;
+}
+
+.math-2 {
+    top: 120px;
+    right: 45px;
+}
+
+.math-3 {
+    bottom: 50px;
+    left: 90px;
+}
+
+.math-4 {
+    bottom: 28px;
+    right: 40px;
+}
+
+
+/* TRIANGLE */
+
+.triangle {
+    position: absolute;
+
+    left: 160px;
+    top: 95px;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        45px solid transparent;
+
+    border-right:
+        45px solid transparent;
+
+    border-bottom:
+        80px solid rgba(255,255,255,0.85);
+}
+
+.triangle::after {
+    content: "";
+
+    position: absolute;
+
+    left: -34px;
+    top: 17px;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        34px solid transparent;
+
+    border-right:
+        34px solid transparent;
+
+    border-bottom:
+        60px solid #286d4c;
+}
+
+
+/* TEACHER PHOTO */
+
+.teacher-frame {
+    position: absolute;
+
+    z-index: 50;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 350px;
+    height: 440px;
+
+    overflow: hidden;
+
+    border-radius:
+        180px 180px 0 0;
+
+    filter:
+        drop-shadow(
+            0 15px 18px
+            rgba(0,0,0,0.18)
+        );
+}
+
+.teacher-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ead8ca,
+            #fff6ef
+        );
+}
+
+
+/* BOOK STACK */
+
+.book-stack {
+    position: absolute;
+
+    z-index: 70;
+
+    right: -5px;
+
+    bottom: 38px;
+
+    width: 280px;
+}
+
+.book {
+    height: 38px;
+
+    border-radius: 5px;
+
+    margin-top: 6px;
+
+    box-shadow:
+        0 6px 12px
+        rgba(0,0,0,0.13);
+}
+
+.book-1 {
+    width: 205px;
+    margin-left: 65px;
+    background: #e4a22a;
+}
+
+.book-2 {
+    width: 245px;
+    margin-left: 20px;
+    background: #df6767;
+}
+
+.book-3 {
+    width: 280px;
+    background: #3d82bd;
+}
+
+.book-4 {
+    width: 235px;
+    margin-left: 40px;
+    background: #f0c943;
+}
+
+.book-5 {
+    width: 260px;
+    margin-left: 10px;
+    background: #ca5d72;
+}
+
+
+/* PENCIL BOX */
+
+.pencil-box {
+    position: absolute;
+
+    right: 75px;
+
+    bottom: 185px;
+
+    width: 105px;
+    height: 80px;
+
+    background: #efa91f;
+
+    border-radius: 8px;
+
+    z-index: 75;
+
+    box-shadow:
+        0 8px 15px
+        rgba(0,0,0,0.12);
+}
+
+.pencil {
+    position: absolute;
+
+    width: 8px;
+    height: 100px;
+
+    background: #f4c83e;
+
+    bottom: 50px;
+
+    border-radius: 4px;
+
+    transform: rotate(7deg);
+}
+
+.pencil::after {
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+
+    border-bottom: 13px solid #d6a77b;
+}
+
+.pencil-1 {
+    left: 15px;
+}
+
+.pencil-2 {
+    left: 35px;
+
+    transform: rotate(-5deg);
+}
+
+.pencil-3 {
+    left: 55px;
+
+    transform: rotate(8deg);
+}
+
+.pencil-4 {
+    left: 75px;
+
+    transform: rotate(-8deg);
+}
+
+
+/* ============================================================
+   QUICK MENU
+============================================================ */
+
+.quick-section {
+    position: relative;
+
+    z-index: 100;
+
+    background: white;
+
+    padding:
+        38px 0 45px;
+}
+
+.quick-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 15px;
+}
+
+.quick-card {
+    position: relative;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 17px;
+
+    padding:
+        20px 10px;
+
+    text-align: center;
+
+    min-height: 150px;
+
+    box-shadow:
+        0 5px 18px
+        rgba(35,110,80,0.06);
+
+    transition:
+        0.3s ease;
+}
+
+.quick-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #b9dfce;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.quick-icon {
+    width: 50px;
+    height: 50px;
+
+    margin:
+        0 auto 12px;
+
+    border-radius: 15px;
+
+    background:
+        #e0f6e9;
+
+    color: var(--green);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.quick-card:nth-child(2)
+.quick-icon {
+    background: #e2f6e9;
+}
+
+.quick-card:nth-child(3)
+.quick-icon {
+    background: #e2f6e9;
+}
+
+.quick-card:nth-child(4)
+.quick-icon {
+    background: #fff3ce;
+
+    color: #e3a600;
+}
+
+.quick-card:nth-child(5)
+.quick-icon {
+    background: #e2f1ff;
+
+    color: #2479bb;
+}
+
+.quick-card:nth-child(6)
+.quick-icon {
+    background: #e0f6eb;
+
+    color: #16875c;
+}
+
+.quick-card h3 {
+    color: #245a72;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+.quick-card p {
+    color: #758680;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* ============================================================
+   GENERAL SECTION
+============================================================ */
+
+section {
+    padding:
+        85px 0;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-label {
+    display: inline-block;
+
+    background:
+        var(--green-light);
+
+    color:
+        var(--green-dark);
+
+    padding:
+        7px 17px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #155873;
+
+    font-size:
+        clamp(28px,4vw,40px);
+
+    margin-bottom: 9px;
+}
+
+.section-heading p {
+    max-width: 680px;
+
+    margin: auto;
+
+    color: #70827c;
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   PROFILE
+============================================================ */
+
+#profil {
+    background:
+        #f7fffb;
+}
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+
+/* PROFILE IMAGE CARD */
+
+.profile-photo-card {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius:
+        30px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #bfefff,
+            #e9fbe9
+        );
+
+    box-shadow:
+        var(--shadow);
+}
+
+.profile-photo-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 25px;
+    left: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    z-index: 2;
+}
+
+.profile-photo-card img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+}
+
+.profile-caption {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.68)
+        );
+}
+
+.profile-caption h3 {
+    font-size: 24px;
+}
+
+.profile-caption p {
+    font-size: 13px;
+
+    opacity: .9;
+}
+
+
+/* PROFILE TEXT */
+
+.profile-content {
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        25px;
+
+    padding: 38px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.profile-content h3 {
+    color:
+        var(--green-dark);
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.profile-content > p {
+    color:
+        #62776f;
+
+    margin-bottom: 25px;
+}
+
+.info-list {
+    display: grid;
+
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+
+    gap: 15px;
+
+    padding:
+        15px;
+
+    border-radius: 14px;
+
+    background:
+        #f5fcf8;
+}
+
+.info-icon {
+    flex:
+        0 0 45px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 13px;
+
+    background:
+        var(--green-light);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green);
+
+    font-size: 21px;
+}
+
+.info-item strong {
+    display: block;
+
+    color:
+        #245d4b;
+
+    font-size: 14px;
+}
+
+.info-item span {
+    display: block;
+
+    color:
+        #74867f;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   KONTEN EDUKASI
+============================================================ */
+
+#konten {
+    background:
+        linear-gradient(
+            180deg,
+            #f0fbf5,
+            #ffffff
+        );
+}
+
+.education-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.education-card {
+    background: white;
+
+    overflow: hidden;
+
+    border-radius:
+        20px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow-small);
+
+    transition:
+        .3s ease;
+}
+
+.education-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.education-cover {
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bfeeff,
+            #dff8e8
+        );
+}
+
+.education-cover::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.45);
+
+    right: -40px;
+    top: -50px;
+}
+
+.education-symbol {
+    font-size: 70px;
+
+    z-index: 2;
+}
+
+.education-content {
+    padding:
+        22px;
+}
+
+.education-content h3 {
+    color:
+        #155b75;
+
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+.education-content p {
+    color:
+        #73847e;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color:
+        var(--green);
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   PENGALAMAN
+============================================================ */
+
+.experience-wrapper {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.timeline {
+    position: relative;
+
+    display: grid;
+
+    gap: 28px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 22px;
+
+    width: 3px;
+
+    background:
+        #cdebdc;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 70px;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: 8px;
+    top: 7px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+
+    border:
+        5px solid white;
+
+    box-shadow:
+        0 0 0 2px #bce5ce;
+}
+
+.timeline-card {
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        18px;
+
+    padding:
+        25px;
+
+    box-shadow:
+        var(--shadow-small);
+}
+
+.timeline-card small {
+    color:
+        var(--green);
+
+    font-weight:
+        800;
+
+    font-size:
+        12px;
+}
+
+.timeline-card h3 {
+    color:
+        #155873;
+
+    font-size:
+        19px;
+
+    margin:
+        5px 0;
+}
+
+.timeline-card p {
+    color:
+        #6d7f79;
+
+    font-size:
+        13px;
+}
+
+
+/* ============================================================
+   PRESTASI
+============================================================ */
+
+#prestasi {
+    background:
+        #effbf5;
+}
+
+.achievement-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        25px;
+}
+
+.achievement-card {
+    padding:
+        30px;
+
+    background:
+        white;
+
+    border-radius:
+        20px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow-small);
+
+    text-align:
+        center;
+
+    transition:
+        .3s;
+}
+
+.achievement-card:hover {
+    transform:
+        translateY(-7px);
+}
+
+.achievement-icon {
+    width:
+        70px;
+
+    height:
+        70px;
+
+    margin:
+        auto auto 18px;
+
+    border-radius:
+        22px;
+
+    background:
+        #fff2c9;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        34px;
+}
+
+.achievement-card h3 {
+    color:
+        #245c50;
+
+    font-size:
+        19px;
+
+    margin-bottom:
+        7px;
+}
+
+.achievement-card p {
+    color:
+        #71817c;
+
+    font-size:
+        13px;
+}
+
+
+/* ============================================================
+   MEDIA PEMBELAJARAN
+============================================================ */
+
+.media-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        25px;
+}
+
+.media-card {
+    overflow:
+        hidden;
+
+    background:
+        white;
+
+    border-radius:
+        20px;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow-small);
+}
+
+.media-preview {
+    height:
+        210px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    position:
+        relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9f6ff,
+            #e4f8e8
+        );
+}
+
+.play-button {
+    width:
+        65px;
+
+    height:
+        65px;
+
+    border-radius:
+        50%;
+
+    background:
+        white;
+
+    color:
+        var(--green);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        24px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.10);
+}
+
+.media-content {
+    padding:
+        22px;
+}
+
+.media-content h3 {
+    color:
+        #155a73;
+
+    margin-bottom:
+        7px;
+}
+
+.media-content p {
+    color:
+        #71827c;
+
+    font-size:
+        13px;
+
+    margin-bottom:
+        15px;
+}
+
+.media-button {
+    display:
+        inline-block;
+
+    padding:
+        9px 17px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--green-light);
+
+    color:
+        var(--green-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+}
+
+
+/* ============================================================
+   QUOTE
+============================================================ */
+
+.quote-section {
+    background:
+        linear-gradient(
+            135deg,
+            #dff7e8,
+            #dff5ff
+        );
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+.quote-section::before {
+    content:
+        "“";
+
+    position:
+        absolute;
+
+    font-size:
+        240px;
+
+    color:
+        rgba(21,135,92,.08);
+
+    left:
+        5%;
+
+    top:
+        -70px;
+}
+
+.quote-content {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        850px;
+
+    margin:
+        auto;
+}
+
+.quote-content h2 {
+    color:
+        #155873;
+
+    font-size:
+        clamp(25px,4vw,38px);
+
+    line-height:
+        1.3;
+
+    margin-bottom:
+        15px;
+}
+
+.quote-content p {
+    color:
+        #5e776f;
+
+    font-size:
+        15px;
+}
+
+
+/* ============================================================
+   KONTAK
+============================================================ */
+
+#kontak {
+    background:
+        white;
+}
+
+.contact-wrapper {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        30px;
+}
+
+.contact-card {
+    background:
+        linear-gradient(
+            135deg,
+            #e2f8eb,
+            #e2f7ff
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        25px;
+
+    padding:
+        40px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.contact-card h2 {
+    color:
+        #155873;
+
+    font-size:
+        32px;
+
+    margin-bottom:
+        10px;
+}
+
+.contact-card > p {
+    color:
+        #647a73;
+
+    margin-bottom:
+        25px;
+}
+
+.contact-details {
+    display:
+        grid;
+
+    gap:
+        13px;
+}
+
+.contact-detail {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    padding:
+        14px;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255,255,255,.75);
+}
+
+.contact-detail-icon {
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border-radius:
+        11px;
+
+    background:
+        white;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--green);
+}
+
+.contact-detail strong {
+    display:
+        block;
+
+    color:
+        #245c4d;
+
+    font-size:
+        13px;
+}
+
+.contact-detail span {
+    color:
+        #72837e;
+
+    font-size:
+        12px;
+}
+
+
+/* CONTACT FORM */
+
+.contact-form {
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        25px;
+
+    padding:
+        35px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+.contact-form h3 {
+    color:
+        #155873;
+
+    font-size:
+        23px;
+
+    margin-bottom:
+        20px;
+}
+
+.form-group {
+    margin-bottom:
+        15px;
+}
+
+.form-group label {
+    display:
+        block;
+
+    color:
+        #4d6e65;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    margin-bottom:
+        6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width:
+        100%;
+
+    border:
+        1px solid #d7ebe1;
+
+    background:
+        #f9fdfb;
+
+    padding:
+        13px 15px;
+
+    border-radius:
+        11px;
+
+    outline:
+        none;
+
+    color:
+        #31574d;
+
+    font-size:
+        13px;
+
+    transition:
+        .2s;
+}
+
+.form-group textarea {
+    min-height:
+        120px;
+
+    resize:
+        vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color:
+        var(--green);
+
+    background:
+        white;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(21,135,92,.08);
+}
+
+.submit-btn {
+    width:
+        100%;
+
+    border:
+        none;
+
+    padding:
+        14px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--green);
+
+    color:
+        white;
+
+    font-weight:
+        800;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s;
+}
+
+.submit-btn:hover {
+    background:
+        var(--green-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #dff6e8,
+            #d1f0dc
+        );
+
+    border-top:
+        1px solid #c6e7d4;
+
+    padding:
+        35px 0;
+}
+
+.footer-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+}
+
+.footer-brand strong {
+    color:
+        #17634c;
+
+    font-size:
+        16px;
+}
+
+.footer-brand span {
+    display:
+        block;
+
+    color:
+        #658079;
+
+    font-size:
+        11px;
+
+    margin-top:
+        4px;
+}
+
+.footer-quote {
+    text-align:
+        center;
+
+    color:
+        #4e7669;
+
+    font-size:
+        12px;
+
+    font-style:
+        italic;
+}
+
+.social-links {
+    display:
+        flex;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        10px;
+}
+
+.social-links a {
+    width:
+        40px;
+
+    height:
+        40px;
+
+    border-radius:
+        50%;
+
+    background:
+        white;
+
+    color:
+        var(--green);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-weight:
+        900;
+
+    border:
+        1px solid #c8e6d6;
+
+    transition:
+        .25s;
+}
+
+.social-links a:hover {
+    transform:
+        translateY(-4px);
+
+    background:
+        var(--green);
+
+    color:
+        white;
+}
+
+.copyright {
+    margin-top:
+        25px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(55,120,91,.12);
+
+    text-align:
+        center;
+
+    color:
+        #71867f;
+
+    font-size:
+        11px;
+}
+
+
+/* ============================================================
+   BACK TO TOP
+============================================================ */
+
+#backTop {
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    cursor:
+        pointer;
+
+    z-index:
+        4000;
+
+    opacity:
+        0;
+
+    visibility:
+        hidden;
+
+    transform:
+        translateY(15px);
+
+    transition:
+        .3s;
+}
+
+#backTop.show {
+    opacity:
+        1;
+
+    visibility:
+        visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ============================================================
+   ANIMATION
+============================================================ */
+
+.fade-up {
+    opacity:
+        0;
+
+    transform:
+        translateY(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.fade-up.visible {
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ============================================================
+   RESPONSIVE TABLET
+============================================================ */
+
+@media(max-width:1100px) {
+
+    nav ul {
+        gap:
+            14px;
+    }
+
+    nav a {
+        font-size:
+            10px;
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .hero-content {
+        width:
+            55%;
+    }
+
+    .hero-art {
+        width:
+            53%;
+    }
+
+    .board {
+        width:
+            390px;
+
+        height:
+            255px;
+    }
+
+    .teacher-frame {
+        width:
+            310px;
+
+        height:
+            395px;
+    }
+
+    .book-stack {
+        transform:
+            scale(.82);
+
+        transform-origin:
+            right bottom;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE MOBILE
+============================================================ */
+
+@media(max-width:850px) {
+
+    header {
+        position:
+            fixed;
+    }
+
+    .mobile-menu {
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+    }
+
+    nav {
+        position:
+            absolute;
+
+        top:
+            78px;
+
+        left:
+            0;
+
+        width:
+            100%;
+
+        background:
+            white;
+
+        display:
+            none;
+
+        box-shadow:
+            0 10px 25px
+            rgba(0,0,0,.08);
+    }
+
+    nav.open {
+        display:
+            block;
+    }
+
+    nav ul {
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            0;
+
+        padding:
+            10px 20px 20px;
+    }
+
+    nav li {
+        width:
+            100%;
+    }
+
+    nav a {
+        padding:
+            13px 8px;
+
+        font-size:
+            13px;
+    }
+
+    nav a.active::after {
+        display:
+            none;
+    }
+
+    .hero {
+        min-height:
+            930px;
+    }
+
+    .hero-content {
+        width:
+            100%;
+
+        text-align:
+            center;
+
+        padding:
+            65px 0 0;
+    }
+
+    .hero-location {
+        justify-content:
+            center;
+    }
+
+    .hero-description {
+        margin-left:
+            auto;
+
+        margin-right:
+            auto;
+    }
+
+    .hero-art {
+        width:
+            100%;
+
+        height:
+            500px;
+
+        bottom:
+            0;
+    }
+
+    .board {
+        right:
+            50%;
+
+        transform:
+            translateX(50%)
+            rotate(-1deg);
+
+        width:
+            390px;
+
+        top:
+            45px;
+    }
+
+    .teacher-frame {
+        width:
+            290px;
+
+        height:
+            370px;
+    }
+
+    .book-stack {
+        right:
+            -25px;
+
+        transform:
+            scale(.75);
+
+        transform-origin:
+            right bottom;
+    }
+
+    .pencil-box {
+        right:
+            30px;
+
+        bottom:
+            165px;
+    }
+
+    .profile-grid,
+    .contact-wrapper {
+        grid-template-columns:
+            1fr;
+    }
+
+    .education-grid,
+    .achievement-grid,
+    .media-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+    }
+
+    .social-links {
+        justify-content:
+            center;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE SMALL MOBILE
+============================================================ */
+
+@media(max-width:560px) {
+
+    .container {
+        width:
+            90%;
+    }
+
+    .logo-area {
+        min-width:
+            auto;
+    }
+
+    .logo {
+        width:
+            44px;
+
+        height:
+            44px;
+
+        font-size:
+            21px;
+    }
+
+    .logo-text strong {
+        font-size:
+            13px;
+    }
+
+    .logo-text span {
+        font-size:
+            9px;
+    }
+
+    .hero {
+        min-height:
+            850px;
+    }
+
+    .welcome-text {
+        font-size:
+            19px;
+    }
+
+    .hero-title {
+        font-size:
+            38px;
+
+        letter-spacing:
+            -1px;
+    }
+
+    .hero-name {
+        font-size:
+            23px;
+    }
+
+    .hero-profession {
+        font-size:
+            15px;
+    }
+
+    .hero-description {
+        font-size:
+            14px;
+    }
+
+    .hero-art {
+        height:
+            420px;
+    }
+
+    .board {
+        width:
+            285px;
+
+        height:
+            190px;
+
+        top:
+            30px;
+
+        border-width:
+            9px;
+    }
+
+    .board-title {
+        font-size:
+            12px;
+    }
+
+    .math {
+        font-size:
+            17px;
+    }
+
+    .triangle {
+        left:
+            95px;
+
+        top:
+            65px;
+
+        transform:
+            scale(.65);
+    }
+
+    .teacher-frame {
+        width:
+            235px;
+
+        height:
+            300px;
+    }
+
+    .book-stack {
+        right:
+            -55px;
+
+        bottom:
+            25px;
+
+        transform:
+            scale(.55);
+    }
+
+    .pencil-box {
+        right:
+            15px;
+
+        bottom:
+            125px;
+
+        transform:
+            scale(.75);
+    }
+
+    .quick-grid {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            10px;
+    }
+
+    .quick-card {
+        min-height:
+            140px;
+    }
+
+    .profile-content {
+        padding:
+            25px;
+    }
+
+    .education-grid,
+    .achievement-grid,
+    .media-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .contact-card,
+    .contact-form {
+        padding:
+            25px;
+    }
+
+    section {
+        padding:
+            65px 0;
+    }
+
+    .section-heading {
+        margin-bottom:
+            32px;
+    }
+
+    #backTop {
+        right:
+            15px;
+
+        bottom:
+            15px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ============================================================
+     LOADING SCREEN
+============================================================ -->
+
+<div id="loading-screen">
+
+    <div class="loader-box">
+
+        <div class="loader-logo">
+            🎓
+        </div>
+
+        <h3>
+            Portofolio Guru
+        </h3>
+
+        <p>
+            Menyiapkan halaman...
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+
+<header id="header">
+
+    <div class="container navbar">
+
+
+        <!-- BRAND -->
+
+        <a href="#beranda" class="logo-area">
+
+            <div class="logo">
+                🎓
+            </div>
+
+            <div class="logo-text">
+
+                <strong>
+                    Portofolio Guru
+                </strong>
+
+                <span>
+                    Risda Ardian Elistiana
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Menu">
+
+            ☰
+
+        </button>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav id="navigation">
+
+            <ul>
+
+                <li>
+                    <a
+                        href="#beranda"
+                        class="nav-link active">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#profil"
+                        class="nav-link">
+                        Profil
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#konten"
+                        class="nav-link">
+                        Konten Edukasi
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#pengalaman"
+                        class="nav-link">
+                        Pengalaman
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#prestasi"
+                        class="nav-link">
+                        Prestasi/Karya
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#media"
+                        class="nav-link">
+                        Media Pembelajaran
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#kontak"
+                        class="nav-link">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- ============================================================
+     HERO / BERANDA
+============================================================ -->
+
+<main>
+
+
+<section
+    class="hero"
+    id="beranda">
+
+
+    <!-- CLOUD -->
+
+    <div class="cloud cloud-1">
+        ☁
+    </div>
+
+    <div class="cloud cloud-2">
+        ☁
+    </div>
+
+    <div class="cloud cloud-3">
+        ☁
+    </div>
+
+
+    <!-- SUN -->
+
+    <div class="sun">
+        ☼
+    </div>
+
+
+
+    <div class="container">
+
+
+        <!-- HERO TEXT -->
+
+        <div class="hero-content fade-up">
+
+            <div class="welcome-text">
+
+                Selamat Datang di
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Portofolio Guru
+
+            </h1>
+
+
+            <div class="hero-name">
+
+                Risda Ardian Elistiana
+
+            </div>
+
+
+            <div class="hero-profession">
+
+                Guru Matematika
+
+            </div>
+
+
+            <div class="hero-location">
+
+                <span class="pin">
+                    📍
+                </span>
+
+                <span>
+
+                    SDN Karangsono 1
+                    <br>
+
+                    Kabupaten Ngawi
+
+                </span>
+
+            </div>
+
+
+            <p class="hero-description">
+
+                “Belajar Matematika dengan Cara
+                yang Bermakna dan Menyenangkan.”
+
+            </p>
+
+
+            <a
+                href="#profil"
+                class="hero-button">
+
+                Jelajahi Portofolio
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- HERO ILLUSTRATION -->
+
+        <div class="hero-art">
+
+
+            <!-- BLACKBOARD -->
+
+            <div class="board">
+
+                <div class="board-title">
+                    Matematika Itu Menyenangkan!
+                </div>
+
+                <div class="math math-1">
+                    1 + 2 = 3
+                </div>
+
+                <div class="math math-2">
+                    a² + b² = c²
+                </div>
+
+                <div class="math math-3">
+                    3 × 4 = 12
+                </div>
+
+                <div class="math math-4">
+                    10 ÷ 2 = 5
+                </div>
+
+                <div class="triangle"></div>
+
+            </div>
+
+
+
+            <!-- FOTO GURU -->
+
+            <div class="teacher-frame">
+
+                <!--
+                ==================================================
+                GANTI FOTO GURU DI SINI
+
+                Contoh:
+                src="foto-guru.jpg"
+
+                atau:
+
+                src="images/risda.jpg"
+                ==================================================
+                -->
+
+                <img
+                    src="foto-guru.jpg"
+                    alt="Foto Risda Ardian Elistiana"
+                    class="teacher-photo">
+
+            </div>
+
+
+
+            <!-- BUKU -->
+
+            <div class="book-stack">
+
+                <div class="book book-1"></div>
+
+                <div class="book book-2"></div>
+
+                <div class="book book-3"></div>
+
+                <div class="book book-4"></div>
+
+                <div class="book book-5"></div>
+
+            </div>
+
+
+
+            <!-- PENCIL BOX -->
+
+            <div class="pencil-box">
+
+                <span class="pencil pencil-1"></span>
+                <span class="pencil pencil-2"></span>
+                <span class="pencil pencil-3"></span>
+                <span class="pencil pencil-4"></span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     QUICK MENU
+============================================================ -->
+
+<section class="quick-section">
+
+    <div class="container">
+
+        <div class="quick-grid">
+
+
+            <!-- PROFIL -->
+
+            <a
+                href="#profil"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Profil
+                </h3>
+
+                <p>
+                    Mengenal lebih dekat
+                    tentang saya
+                </p>
+
+            </a>
+
+
+
+            <!-- KONTEN -->
+
+            <a
+                href="#konten"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Konten Edukasi
+                </h3>
+
+                <p>
+                    Materi pembelajaran
+                    yang bermanfaat
+                </p>
+
+            </a>
+
+
+
+            <!-- PENGALAMAN -->
+
+            <a
+                href="#pengalaman"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Pengalaman
+                </h3>
+
+                <p>
+                    Perjalanan dan
+                    praktik mengajar
+                </p>
+
+            </a>
+
+
+
+            <!-- PRESTASI -->
+
+            <a
+                href="#prestasi"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Prestasi/Karya
+                </h3>
+
+                <p>
+                    Karya dan pencapaian
+                    yang membanggakan
+                </p>
+
+            </a>
+
+
+
+            <!-- MEDIA -->
+
+            <a
+                href="#media"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    ▶
+                </div>
+
+                <h3>
+                    Media Pembelajaran
+                </h3>
+
+                <p>
+                    Media interaktif
+                    dan menarik
+                </p>
+
+            </a>
+
+
+
+            <!-- KONTAK -->
+
+            <a
+                href="#kontak"
+                class="quick-card fade-up">
+
+                <div class="quick-icon">
+                    ✉
+                </div>
+
+                <h3>
+                    Kontak
+                </h3>
+
+                <p>
+                    Mari terhubung
+                    bersama
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     PROFIL
+============================================================ -->
+
+<section
+    id="profil"
+    class="fade-up">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                TENTANG SAYA
+            </span>
+
+            <h2>
+                Profil Guru
+            </h2>
+
+            <p>
+                Mengenal lebih dekat sosok pendidik,
+                pengalaman, semangat, dan komitmen
+                dalam menciptakan pembelajaran
+                yang bermakna.
+            </p>
+
+        </div>
+
+
+
+        <div class="profile-grid">
+
+
+            <!-- FOTO -->
+
+            <div class="profile-photo-card">
+
+                <img
+                    src="foto-guru.jpg"
+                    alt="Risda Ardian Elistiana">
+
+                <div class="profile-caption">
+
+                    <h3>
+                        Risda Ardian Elistiana
+                    </h3>
+
+                    <p>
+                        Guru Matematika
+                        SDN Karangsono 1
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BIODATA -->
+
+            <div class="profile-content">
+
+                <h3>
+                    Halo, Saya Risda
+                </h3>
+
+                <p>
+
+                    Saya adalah guru Matematika
+                    di SDN Karangsono 1 Kabupaten Ngawi.
+                    Saya percaya bahwa matematika tidak
+                    harus menjadi pelajaran yang sulit.
+                    Dengan pendekatan yang tepat,
+                    pembelajaran dapat menjadi
+                    menyenangkan, kontekstual,
+                    dan bermakna.
+
+                </p>
+
+
+                <div class="info-list">
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            👩‍🏫
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Profesi
+                            </strong>
+
+                            <span>
+                                Guru Matematika
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            🏫
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Satuan Pendidikan
+                            </strong>
+
+                            <span>
+                                SDN Karangsono 1
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Lokasi
+                            </strong>
+
+                            <span>
+                                Kabupaten Ngawi
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            💡
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Fokus Pembelajaran
+                            </strong>
+
+                            <span>
+                                Matematika yang kreatif,
+                                aktif, dan menyenangkan
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="info-item">
+
+                        <div class="info-icon">
+                            🌱
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Prinsip Mengajar
+                            </strong>
+
+                            <span>
+                                Belajar, bertumbuh,
+                                berkarya, dan berkolaborasi
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     KONTEN EDUKASI
+============================================================ -->
+
+<section id="konten">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                KONTEN EDUKASI
+            </span>
+
+            <h2>
+                Materi Pembelajaran
+            </h2>
+
+            <p>
+                Berbagai materi pembelajaran
+                Matematika yang dapat dikembangkan
+                menjadi bahan ajar, modul, LKPD,
+                maupun aktivitas kelas.
+            </p>
+
+        </div>
+
+
+
+        <div class="education-grid">
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        🔢
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Bilangan
+                    </h3>
+
+                    <p>
+
+                        Mengenal bilangan,
+                        membandingkan bilangan,
+                        operasi hitung,
+                        serta penerapannya
+                        dalam kehidupan sehari-hari.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        📐
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Geometri
+                    </h3>
+
+                    <p>
+
+                        Eksplorasi bangun datar,
+                        bangun ruang, sudut,
+                        pengukuran, luas,
+                        dan keliling.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        📊
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Data & Diagram
+                    </h3>
+
+                    <p>
+
+                        Belajar mengumpulkan,
+                        membaca, menyajikan,
+                        dan menganalisis data
+                        sederhana.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        🧮
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Operasi Hitung
+                    </h3>
+
+                    <p>
+
+                        Aktivitas menyenangkan
+                        untuk memahami penjumlahan,
+                        pengurangan, perkalian,
+                        dan pembagian.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        ⏱️
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Pengukuran
+                    </h3>
+
+                    <p>
+
+                        Mengenal panjang,
+                        berat, waktu,
+                        volume, dan berbagai
+                        satuan pengukuran.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article
+                class="education-card fade-up">
+
+                <div class="education-cover">
+
+                    <div class="education-symbol">
+                        🧩
+                    </div>
+
+                </div>
+
+                <div class="education-content">
+
+                    <h3>
+                        Soal Cerita
+                    </h3>
+
+                    <p>
+
+                        Melatih kemampuan
+                        penalaran dan pemecahan
+                        masalah melalui situasi
+                        kehidupan nyata.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="read-more">
+
+                        Lihat Materi →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     PENGALAMAN
+============================================================ -->
+
+<section id="pengalaman">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                PENGALAMAN
+            </span>
+
+            <h2>
+                Perjalanan Mengajar
+            </h2>
+
+            <p>
+                Dokumentasi perjalanan dan pengalaman
+                dalam melaksanakan pembelajaran
+                serta kegiatan pendidikan.
+            </p>
+
+        </div>
+
+
+
+        <div class="experience-wrapper">
+
+            <div class="timeline">
+
+
+                <div class="timeline-item fade-up">
+
+                    <div class="timeline-dot">
+                        1
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <small>
+                            PEMBELAJARAN
+                        </small>
+
+                        <h3>
+                            Pembelajaran Berpusat
+                            pada Peserta Didik
+                        </h3>
+
+                        <p>
+
+                            Merancang aktivitas yang
+                            memberikan kesempatan kepada
+                            peserta didik untuk bertanya,
+                            berdiskusi, mencoba, dan
+                            menemukan konsep.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item fade-up">
+
+                    <div class="timeline-dot">
+                        2
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <small>
+                            KOLABORASI
+                        </small>
+
+                        <h3>
+                            Kelompok Belajar
+                        </h3>
+
+                        <p>
+
+                            Mengembangkan kegiatan belajar
+                            secara berkelompok untuk
+                            meningkatkan komunikasi,
+                            kolaborasi, dan kemampuan
+                            menyelesaikan masalah.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item fade-up">
+
+                    <div class="timeline-dot">
+                        3
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <small>
+                            LITERASI NUMERASI
+                        </small>
+
+                        <h3>
+                            Penguatan Numerasi
+                        </h3>
+
+                        <p>
+
+                            Mengintegrasikan kemampuan
+                            numerasi dalam berbagai
+                            aktivitas pembelajaran
+                            yang dekat dengan kehidupan
+                            peserta didik.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item fade-up">
+
+                    <div class="timeline-dot">
+                        4
+                    </div>
+
+                    <div class="timeline-card">
+
+                        <small>
+                            INOVASI
+                        </small>
+
+                        <h3>
+                            Media Pembelajaran Kreatif
+                        </h3>
+
+                        <p>
+
+                            Mengembangkan media visual,
+                            permainan edukatif, LKPD,
+                            dan media digital untuk
+                            membuat pembelajaran lebih
+                            menarik.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     PRESTASI DAN KARYA
+============================================================ -->
+
+<section id="prestasi">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                PRESTASI & KARYA
+            </span>
+
+            <h2>
+                Karya dan Pencapaian
+            </h2>
+
+            <p>
+                Bagian ini dapat digunakan untuk
+                menampilkan karya, sertifikat,
+                inovasi pembelajaran, maupun
+                pencapaian profesional.
+            </p>
+
+        </div>
+
+
+
+        <div class="achievement-grid">
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    🏆
+                </div>
+
+                <h3>
+                    Prestasi
+                </h3>
+
+                <p>
+
+                    Tambahkan daftar prestasi,
+                    penghargaan, atau pencapaian
+                    yang pernah diraih.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Modul Ajar
+                </h3>
+
+                <p>
+
+                    Tampilkan modul ajar,
+                    perangkat pembelajaran,
+                    dan bahan ajar yang telah dibuat.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Inovasi
+                </h3>
+
+                <p>
+
+                    Dokumentasikan praktik baik
+                    dan inovasi pembelajaran
+                    yang dikembangkan.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    📜
+                </div>
+
+                <h3>
+                    Sertifikat
+                </h3>
+
+                <p>
+
+                    Tempat untuk menampilkan
+                    sertifikat pelatihan,
+                    workshop, dan kegiatan lainnya.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Karya Kreatif
+                </h3>
+
+                <p>
+
+                    Kumpulan desain,
+                    media, LKPD, permainan,
+                    dan karya pembelajaran.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card fade-up">
+
+                <div class="achievement-icon">
+                    🌟
+                </div>
+
+                <h3>
+                    Praktik Baik
+                </h3>
+
+                <p>
+
+                    Cerita dan dokumentasi
+                    praktik baik pembelajaran
+                    di sekolah.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     MEDIA PEMBELAJARAN
+============================================================ -->
+
+<section id="media">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                MEDIA PEMBELAJARAN
+            </span>
+
+            <h2>
+                Belajar Lebih Interaktif
+            </h2>
+
+            <p>
+                Kumpulan media pembelajaran
+                digital dan aktivitas kreatif
+                untuk mendukung proses belajar.
+            </p>
+
+        </div>
+
+
+
+        <div class="media-grid">
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div class="play-button">
+                        ▶
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        Video Pembelajaran
+                    </h3>
+
+                    <p>
+
+                        Tambahkan video pembelajaran
+                        Matematika yang telah dibuat
+                        untuk peserta didik.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Buka Video
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div
+                        class="education-symbol">
+                        🧩
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        Permainan Matematika
+                    </h3>
+
+                    <p>
+
+                        Aktivitas permainan untuk
+                        membantu peserta didik belajar
+                        konsep matematika dengan cara
+                        yang menyenangkan.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Lihat Media
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div
+                        class="education-symbol">
+                        📝
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        LKPD Digital
+                    </h3>
+
+                    <p>
+
+                        Kumpulan lembar kerja peserta
+                        didik yang dapat digunakan
+                        dalam kegiatan pembelajaran.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Buka LKPD
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div
+                        class="education-symbol">
+                        📊
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        Presentasi
+                    </h3>
+
+                    <p>
+
+                        Media presentasi pembelajaran
+                        yang dirancang agar materi
+                        lebih mudah dipahami.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Lihat Presentasi
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div
+                        class="education-symbol">
+                        🎲
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        Game Edukasi
+                    </h3>
+
+                    <p>
+
+                        Permainan sederhana yang
+                        menggabungkan unsur belajar
+                        dan aktivitas menyenangkan.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Mainkan
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="media-card fade-up">
+
+                <div class="media-preview">
+
+                    <div
+                        class="education-symbol">
+                        📱
+                    </div>
+
+                </div>
+
+                <div class="media-content">
+
+                    <h3>
+                        Media Digital
+                    </h3>
+
+                    <p>
+
+                        Berbagai sumber belajar
+                        digital yang dapat digunakan
+                        dalam kegiatan pembelajaran.
+
+                    </p>
+
+                    <a
+                        href="#"
+                        class="media-button">
+
+                        Eksplorasi
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     QUOTE
+============================================================ -->
+
+<section class="quote-section">
+
+    <div class="container">
+
+        <div class="quote-content fade-up">
+
+            <h2>
+
+                “Belajar Bersama,
+                Berkarya Bersama,
+                Bertumbuh Bersama.”
+
+            </h2>
+
+            <p>
+
+                Pendidikan adalah jembatan menuju
+                masa depan yang lebih baik.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ============================================================
+     KONTAK
+============================================================ -->
+
+<section id="kontak">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                KONTAK
+            </span>
+
+            <h2>
+                Mari Terhubung
+            </h2>
+
+            <p>
+                Silakan hubungi saya untuk berbagi
+                informasi, kolaborasi, maupun
+                kegiatan pembelajaran.
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-wrapper">
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-card fade-up">
+
+                <h2>
+                    Hubungi Saya
+                </h2>
+
+                <p>
+
+                    Terbuka untuk berbagi pengalaman,
+                    berdiskusi tentang pembelajaran,
+                    dan berkolaborasi dalam kegiatan
+                    pendidikan.
+
+                </p>
+
+
+
+                <div class="contact-details">
+
+
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sekolah
+                            </strong>
+
+                            <span>
+                                SDN Karangsono 1,
+                                Kabupaten Ngawi
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            ✉
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Email
+                            </strong>
+
+                            <span>
+                                emailanda@example.com
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            📱
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                WhatsApp
+                            </strong>
+
+                            <span>
+                                08xxxxxxxxxx
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            ▶
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                YouTube
+                            </strong>
+
+                            <span>
+                                @channelanda
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form fade-up">
+
+                <h3>
+                    Kirim Pesan
+                </h3>
+
+
+                <form id="contactForm">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Nama
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nama"
+                            placeholder="Masukkan nama Anda"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Masukkan email Anda"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Pesan
+                        </label>
+
+                        <textarea
+                            id="pesan"
+                            placeholder="Tulis pesan Anda..."
+                            required></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn">
+
+                        Kirim Pesan
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <strong>
+                    📍 SDN Karangsono 1
+                </strong>
+
+                <span>
+                    Kabupaten Ngawi
+                </span>
+
+            </div>
+
+
+
+            <div class="footer-quote">
+
+                “Pendidikan adalah jembatan
+                menuju masa depan yang lebih baik.”
+
+            </div>
+
+
+
+            <div class="social-links">
+
+                <a
+                    href="#"
+                    title="Facebook">
+                    f
+                </a>
+
+                <a
+                    href="#"
+                    title="Instagram">
+                    ◎
+                </a>
+
+                <a
+                    href="#"
+                    title="YouTube">
+                    ▶
+                </a>
+
+                <a
+                    href="#"
+                    title="Email">
+                    ✉
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            © <span id="year"></span>
+            Risda Ardian Elistiana.
+            Semua hak dilindungi.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+    id="backTop"
+    title="Kembali ke atas">
+
+    ↑
+
+</button>
+
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
+<script>
+
+/* ============================================================
+   LOADING SCREEN
+============================================================ */
+
+window.addEventListener(
+    "load",
+    function() {
+
+        const loading =
+            document.getElementById(
+                "loading-screen"
+            );
+
+        setTimeout(
+            function() {
+
+                loading.style.opacity = "0";
+
+                setTimeout(
+                    function() {
+
+                        loading.style.display =
+                            "none";
+
+                    },
+                    500
+                );
+
+            },
+            700
+        );
+
+    }
+);
+
+
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+
+const mobileMenu =
+    document.getElementById(
+        "mobileMenu"
+    );
+
+const navigation =
+    document.getElementById(
+        "navigation"
+    );
+
+
+mobileMenu.addEventListener(
+    "click",
+    function() {
+
+        navigation.classList.toggle(
+            "open"
+        );
+
+        if (
+            navigation.classList.contains(
+                "open"
+            )
+        ) {
+
+            mobileMenu.innerHTML =
+                "✕";
+
+        } else {
+
+            mobileMenu.innerHTML =
+                "☰";
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   CLOSE MOBILE MENU
+============================================================ */
+
+const navLinks =
+    document.querySelectorAll(
+        ".nav-link"
+    );
+
+
+navLinks.forEach(
+    function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                navigation.classList.remove(
+                    "open"
+                );
+
+                mobileMenu.innerHTML =
+                    "☰";
+
+            }
+        );
+
+    }
+);
+
+
+/* ============================================================
+   HEADER SCROLL EFFECT
+============================================================ */
+
+const header =
+    document.getElementById(
+        "header"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        if (
+            window.scrollY > 30
+        ) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+/* ============================================================
+   ACTIVE NAVIGATION
+============================================================ */
+
+const sections =
+    document.querySelectorAll(
+        "main section[id]"
+    );
+
+
+function updateActiveNav() {
+
+    let currentSection =
+        "beranda";
+
+    sections.forEach(
+        function(section) {
+
+            const sectionTop =
+                section.offsetTop - 180;
+
+            if (
+                window.scrollY >=
+                sectionTop
+            ) {
+
+                currentSection =
+                    section.id;
+
+            }
+
+        }
+    );
+
+
+    navLinks.forEach(
+        function(link) {
+
+            link.classList.remove(
+                "active"
+            );
+
+            const href =
+                link.getAttribute(
+                    "href"
+                );
+
+            if (
+                href ===
+                "#" + currentSection
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNav
+);
+
+
+/* ============================================================
+   SCROLL ANIMATION
+============================================================ */
+
+const animatedElements =
+    document.querySelectorAll(
+        ".fade-up"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+animatedElements.forEach(
+    function(element) {
+
+        observer.observe(
+            element
+        );
+
+    }
+);
+
+
+/* ============================================================
+   BACK TO TOP
+============================================================ */
+
+const backTop =
+    document.getElementById(
+        "backTop"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        if (
+            window.scrollY > 500
+        ) {
+
+            backTop.classList.add(
+                "show"
+            );
+
+        } else {
+
+            backTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+backTop.addEventListener(
+    "click",
+    function() {
+
+        window.scrollTo(
+            {
+                top: 0,
+                behavior: "smooth"
+            }
+        );
+
+    }
+);
+
+
+/* ============================================================
+   CONTACT FORM
+============================================================ */
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+contactForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const nama =
+            document.getElementById(
+                "nama"
+            ).value;
+
+        const email =
+            document.getElementById(
+                "email"
+            ).value;
+
+        const pesan =
+            document.getElementById(
+                "pesan"
+            ).value;
+
+
+        if (
+            nama === "" ||
+            email === "" ||
+            pesan === ""
+        ) {
+
+            alert(
+                "Silakan lengkapi semua data."
+            );
+
+            return;
+
+        }
+
+
+        alert(
+            "Terima kasih, " +
+            nama +
+            "! Pesan Anda sudah disiapkan."
+        );
+
+
+        contactForm.reset();
+
+    }
+);
+
+
+/* ============================================================
+   CURRENT YEAR
+============================================================ */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+/* ============================================================
+   SMOOTH SCROLL TAMBAHAN
+============================================================ */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(
+    function(anchor) {
+
+        anchor.addEventListener(
+            "click",
+            function(event) {
+
+                const targetId =
+                    this.getAttribute(
+                        "href"
+                    );
+
+                if (
+                    targetId === "#"
+                ) {
+                    return;
+                }
+
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+
+                if (target) {
+
+                    event.preventDefault();
+
+
+                    const headerHeight =
+                        header.offsetHeight;
+
+
+                    const targetPosition =
+                        target.offsetTop -
+                        headerHeight;
+
+
+                    window.scrollTo(
+                        {
+                            top:
+                                targetPosition,
+                            behavior:
+                                "smooth"
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
